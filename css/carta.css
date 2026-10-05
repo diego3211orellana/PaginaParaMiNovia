@@ -1,0 +1,1235 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(167, 88, 115, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(110, 55, 80, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #180d14,
+            #29141f,
+            #13090f
+        );
+
+    color: #f8e8ed;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   FONDO
+========================================= */
+
+.fondo {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+}
+
+
+.corazon-fondo {
+
+    position: absolute;
+
+    color: rgba(255, 188, 209, 0.07);
+
+    font-size: 180px;
+
+    animation: flotar 9s ease-in-out infinite;
+
+}
+
+
+.corazon-1 {
+
+    top: -60px;
+
+    left: -50px;
+
+}
+
+
+.corazon-2 {
+
+    right: -80px;
+
+    top: 35%;
+
+    font-size: 240px;
+
+    animation-delay: 2s;
+
+}
+
+
+.corazon-3 {
+
+    left: 10%;
+
+    bottom: -100px;
+
+    font-size: 220px;
+
+    animation-delay: 4s;
+
+}
+
+
+/* =========================================
+   PÉTALOS
+========================================= */
+
+.petalos {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+}
+
+
+.petalos span {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    color: rgba(224, 153, 177, 0.25);
+
+    font-size: 15px;
+
+    animation: subir 12s linear infinite;
+
+}
+
+
+.petalos span:nth-child(1) {
+
+    left: 10%;
+
+    animation-delay: 1s;
+
+}
+
+
+.petalos span:nth-child(2) {
+
+    left: 27%;
+
+    animation-delay: 5s;
+
+}
+
+
+.petalos span:nth-child(3) {
+
+    left: 45%;
+
+    animation-delay: 3s;
+
+}
+
+
+.petalos span:nth-child(4) {
+
+    left: 65%;
+
+    animation-delay: 7s;
+
+}
+
+
+.petalos span:nth-child(5) {
+
+    left: 80%;
+
+    animation-delay: 2s;
+
+}
+
+
+.petalos span:nth-child(6) {
+
+    left: 93%;
+
+    animation-delay: 6s;
+
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.pagina-carta {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 920px;
+
+    margin: auto;
+
+    padding: 80px 25px 70px;
+
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+
+    animation: aparecer 1.2s ease forwards;
+
+}
+
+
+.sello {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(235, 179, 198, 0.25);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    box-shadow:
+        0 0 30px rgba(220, 130, 160, 0.1);
+
+}
+
+
+.sello span {
+
+    color: #dfa0b8;
+
+    font-size: 22px;
+
+}
+
+
+.etiqueta {
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #d49aac;
+
+    margin-bottom: 18px;
+
+}
+
+
+.encabezado h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(52px, 8vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #fff0f5;
+
+    text-shadow:
+        0 5px 25px rgba(240, 150, 180, 0.15);
+
+}
+
+
+.ornamento {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 25px auto;
+
+}
+
+
+.ornamento span {
+
+    color: #c987a0;
+
+    font-size: 13px;
+
+}
+
+
+.ornamento div {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #bd718e,
+        transparent
+    );
+
+}
+
+
+.introduccion {
+
+    max-width: 520px;
+
+    margin: auto;
+
+    color: #c8adb7;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================
+   PAPEL
+========================================= */
+
+.papel-carta {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f9f1e9,
+            #f4e5dc
+        );
+
+    color: #443038;
+
+    padding: 75px clamp(30px, 8vw, 90px);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255,255,255,0.1);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   BORDE DEL PAPEL
+========================================= */
+
+.papel-carta::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px solid rgba(124, 73, 83, 0.18);
+
+    pointer-events: none;
+
+}
+
+
+.papel-carta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    right: -120px;
+
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(160, 84, 106, 0.05);
+
+}
+
+
+/* =========================================
+   ESQUINAS
+========================================= */
+
+.esquina {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-color: rgba(135, 76, 93, 0.3);
+
+    pointer-events: none;
+
+}
+
+
+.esquina-1 {
+
+    top: 30px;
+
+    left: 30px;
+
+    border-top: 1px solid;
+
+    border-left: 1px solid;
+
+}
+
+
+.esquina-2 {
+
+    top: 30px;
+
+    right: 30px;
+
+    border-top: 1px solid;
+
+    border-right: 1px solid;
+
+}
+
+
+.esquina-3 {
+
+    bottom: 30px;
+
+    left: 30px;
+
+    border-bottom: 1px solid;
+
+    border-left: 1px solid;
+
+}
+
+
+.esquina-4 {
+
+    bottom: 30px;
+
+    right: 30px;
+
+    border-bottom: 1px solid;
+
+    border-right: 1px solid;
+
+}
+
+
+/* =========================================
+   ENCABEZADO CARTA
+========================================= */
+
+.encabezado-carta {
+
+    max-width: 680px;
+
+    margin: 0 auto 45px;
+
+}
+
+
+.fecha {
+
+    color: #956274;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.7;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+
+.encabezado-carta h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 52px;
+
+    font-weight: 400;
+
+    color: #793b53;
+
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.texto-carta {
+
+    max-width: 680px;
+
+    margin: auto;
+
+}
+
+
+.texto-carta p {
+
+    color: #5a424a;
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    margin-bottom: 27px;
+
+}
+
+
+.frase-central {
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 43px !important;
+
+    line-height: 1.25 !important;
+
+    color: #8d4662 !important;
+
+    margin: 45px auto !important;
+
+}
+
+
+.frase-central.suave {
+
+    font-size: 38px !important;
+
+    color: #98516b !important;
+
+}
+
+
+.frase-grande {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 55px auto;
+
+    padding: 35px 20px;
+
+    border-top: 1px solid rgba(135, 75, 94, 0.18);
+
+    border-bottom: 1px solid rgba(135, 75, 94, 0.18);
+
+}
+
+
+.frase-grande span {
+
+    color: #a55875;
+
+    font-size: 13px;
+
+}
+
+
+.frase-grande p {
+
+    max-width: 520px;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #71384f;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 43px;
+
+    line-height: 1.25;
+
+}
+
+
+.frase-final {
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px !important;
+
+    color: #8d4160 !important;
+
+    margin: 50px 0 !important;
+
+}
+
+
+/* =========================================
+   FIRMA
+========================================= */
+
+.firma {
+
+    text-align: center;
+
+    margin: 65px auto 10px;
+
+}
+
+
+.linea-firma {
+
+    width: 90px;
+
+    height: 1px;
+
+    margin: 0 auto 20px;
+
+    background: #a25a74;
+
+}
+
+
+.firma p {
+
+    color: #87636d;
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.firma strong {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    color: #783950;
+
+}
+
+
+.firma > span {
+
+    font-size: 18px;
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================
+   TRANSICIÓN
+========================================= */
+
+.transicion {
+
+    text-align: center;
+
+    padding: 90px 20px 30px;
+
+}
+
+
+.anillo {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(231, 174, 194, 0.2);
+
+    font-size: 28px;
+
+    animation: pulso 3s ease-in-out infinite;
+
+}
+
+
+.transicion .etiqueta {
+
+    margin-bottom: 15px;
+
+}
+
+
+.transicion h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(48px, 7vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #fff0f5;
+
+    margin-bottom: 20px;
+
+}
+
+
+.transicion h2 span {
+
+    color: #dfa0b8;
+
+}
+
+
+.texto-transicion {
+
+    max-width: 470px;
+
+    margin: 0 auto 35px;
+
+    color: #c3a8b3;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton-votos {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 16px 26px;
+
+    border: 1px solid rgba(230, 177, 196, 0.35);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.04);
+
+    color: #f4dce5;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.boton-votos strong {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.boton-votos:hover {
+
+    transform: translateY(-4px);
+
+    background: rgba(235, 174, 195, 0.1);
+
+    border-color: rgba(235, 174, 195, 0.65);
+
+}
+
+
+.boton-votos:hover strong {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   CORAZONES FINALES
+========================================= */
+
+.corazones-finales {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 5;
+
+}
+
+
+.corazones-finales span {
+
+    position: absolute;
+
+    bottom: -20px;
+
+    color: rgba(226, 147, 173, 0.22);
+
+    font-size: 14px;
+
+    animation: subir 11s linear infinite;
+
+}
+
+
+.corazones-finales span:nth-child(1) {
+
+    left: 20%;
+
+    animation-delay: 2s;
+
+}
+
+
+.corazones-finales span:nth-child(2) {
+
+    left: 50%;
+
+    animation-delay: 6s;
+
+}
+
+
+.corazones-finales span:nth-child(3) {
+
+    left: 80%;
+
+    animation-delay: 4s;
+
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-25px)
+            rotate(5deg);
+
+    }
+
+}
+
+
+@keyframes subir {
+
+    0% {
+
+        transform:
+            translateY(0)
+            scale(0.7);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    85% {
+
+        opacity: 0.7;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            scale(1.2);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes pulso {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.06);
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .pagina-carta {
+
+        padding: 55px 14px 50px;
+
+    }
+
+
+    .encabezado {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .papel-carta {
+
+        padding: 55px 25px;
+
+    }
+
+
+    .papel-carta::before {
+
+        inset: 9px;
+
+    }
+
+
+    .esquina {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
+
+    .esquina-1,
+    .esquina-2 {
+
+        top: 20px;
+
+    }
+
+
+    .esquina-3,
+    .esquina-4 {
+
+        bottom: 20px;
+
+    }
+
+
+    .esquina-1,
+    .esquina-3 {
+
+        left: 20px;
+
+    }
+
+
+    .esquina-2,
+    .esquina-4 {
+
+        right: 20px;
+
+    }
+
+
+    .encabezado-carta h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .texto-carta p {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .frase-central {
+
+        font-size: 37px !important;
+
+    }
+
+
+    .frase-central.suave {
+
+        font-size: 33px !important;
+
+    }
+
+
+    .frase-grande p {
+
+        font-size: 37px;
+
+    }
+
+
+    .frase-final {
+
+        font-size: 47px !important;
+
+    }
+
+
+    .transicion {
+
+        padding-top: 70px;
+
+    }
+
+
+    .transicion h2 {
+
+        font-size: 53px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .encabezado h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .papel-carta {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .texto-carta p {
+
+        font-size: 17px;
+
+    }
+
+
+    .frase-central {
+
+        font-size: 33px !important;
+
+    }
+
+
+    .frase-grande p {
+
+        font-size: 33px;
+
+    }
+
+
+    .frase-final {
+
+        font-size: 42px !important;
+
+    }
+
+
+    .transicion h2 {
+
+        font-size: 46px;
+
+    }
+
+}

@@ -1,0 +1,1160 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(190, 95, 125, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(126, 63, 91, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #1b1018,
+            #2a1622,
+            #140c12
+        );
+
+    color: #f7e9ed;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   FONDO DECORATIVO
+========================================= */
+
+.fondo-decoracion {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.corazon {
+    position: absolute;
+
+    color: rgba(255, 185, 205, 0.08);
+
+    font-size: 180px;
+
+    animation: flotar 10s ease-in-out infinite;
+}
+
+.corazon-1 {
+    top: -40px;
+    left: -50px;
+
+    animation-delay: 0s;
+}
+
+.corazon-2 {
+    top: 35%;
+    right: -80px;
+
+    font-size: 230px;
+
+    animation-delay: 2s;
+}
+
+.corazon-3 {
+    bottom: -80px;
+    left: 12%;
+
+    font-size: 200px;
+
+    animation-delay: 4s;
+}
+
+.corazon-4 {
+    top: 55%;
+    left: 42%;
+
+    font-size: 100px;
+
+    opacity: 0.04;
+
+    animation-delay: 6s;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.votos-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 80px 25px 60px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado-votos {
+    text-align: center;
+
+    margin-bottom: 55px;
+
+    animation: aparecer 1.2s ease forwards;
+}
+
+.mini-anillo {
+    width: 76px;
+    height: 76px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 211, 224, 0.2);
+
+    box-shadow:
+        0 0 35px rgba(255, 155, 185, 0.12),
+        inset 0 0 20px rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(10px);
+
+    animation: pulso 3s ease-in-out infinite;
+}
+
+.mini-anillo span {
+    font-size: 30px;
+}
+
+.etiqueta {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #dba5b8;
+
+    margin-bottom: 18px;
+}
+
+.encabezado-votos h1 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(58px, 8vw, 92px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #fff2f6;
+
+    text-shadow:
+        0 4px 25px rgba(255, 140, 175, 0.18);
+
+    margin-bottom: 25px;
+}
+
+.encabezado-votos h1 span {
+    font-family: Georgia, serif;
+
+    font-size: 0.4em;
+
+    vertical-align: middle;
+}
+
+.ornamento {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 25px auto;
+}
+
+.ornamento span {
+    color: #d998ae;
+
+    font-size: 14px;
+}
+
+.ornamento div {
+    width: 100px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9849e,
+        transparent
+    );
+}
+
+.fecha-momento {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: #c9aeb8;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 300;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+.carta-votos {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 250, 252, 0.97),
+            rgba(248, 229, 236, 0.96)
+        );
+
+    color: #402431;
+
+    border-radius: 8px;
+
+    padding: 70px clamp(28px, 7vw, 90px);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.38),
+        0 0 0 1px rgba(255, 255, 255, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* Decoración interior */
+
+.carta-votos::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px solid rgba(137, 75, 97, 0.18);
+
+    pointer-events: none;
+}
+
+.carta-votos::after {
+    content: "♥";
+
+    position: absolute;
+
+    top: 18px;
+    right: 30px;
+
+    color: rgba(145, 73, 98, 0.08);
+
+    font-size: 80px;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.introduccion {
+    max-width: 730px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.saludo {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 50px;
+
+    color: #9a4d6c;
+
+    margin-bottom: 25px;
+}
+
+.introduccion p:not(.saludo) {
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #62424f;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SEPARADORES
+========================================= */
+
+.separador {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 60px auto;
+
+    max-width: 500px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(144, 75, 99, 0.35)
+    );
+}
+
+.separador::after {
+    background: linear-gradient(
+        to left,
+        transparent,
+        rgba(144, 75, 99, 0.35)
+    );
+}
+
+.separador span {
+    color: #a85878;
+
+    font-size: 13px;
+}
+
+.separador.grande {
+    margin: 80px auto;
+}
+
+.separador.grande span {
+    font-size: 20px;
+}
+
+
+/* =========================================
+   VOTOS
+========================================= */
+
+.voto {
+    position: relative;
+
+    max-width: 730px;
+
+    margin: 0 auto 75px;
+
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(150, 80, 104, 0.18);
+}
+
+.numero-voto {
+    position: absolute;
+
+    left: -14px;
+
+    top: 0;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f5dce5;
+
+    border: 1px solid rgba(145, 74, 98, 0.25);
+
+    color: #8d4664;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.voto h2 {
+    color: #6d334e;
+
+    font-size: clamp(32px, 5vw, 43px);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.voto p {
+    color: #60414d;
+
+    font-size: 20px;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+.destacado {
+    margin-top: 30px;
+
+    padding: 22px 25px;
+
+    background: rgba(160, 80, 108, 0.07);
+
+    border-left: 3px solid #ad607e;
+
+    color: #71364f !important;
+
+    font-size: 22px !important;
+
+    font-style: italic;
+}
+
+.destacado-suave {
+    padding: 25px;
+
+    margin-top: 30px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 30px rgba(130, 70, 95, 0.04);
+
+    color: #733c54 !important;
+
+    font-size: 22px !important;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   LISTA DE PROMESAS
+========================================= */
+
+.promesas {
+    margin-top: 35px;
+}
+
+.promesa-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 17px;
+
+    padding: 15px 18px;
+
+    background: rgba(255, 255, 255, 0.42);
+
+    border-radius: 5px;
+}
+
+.promesa-item span {
+    color: #a34e70;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+}
+
+.promesa-item p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   GRAN PROMESA
+========================================= */
+
+.gran-promesa {
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding: 45px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(157, 76, 104, 0.08),
+            rgba(255, 255, 255, 0.45)
+        );
+
+    border: 1px solid rgba(150, 78, 103, 0.12);
+
+    border-radius: 5px;
+}
+
+.gran-promesa p {
+    margin-bottom: 13px;
+}
+
+.gran-promesa .frase-principal {
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    color: #713950;
+}
+
+.promesa-destacada {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(52px, 8vw, 78px);
+
+    color: #914661;
+
+    line-height: 1.1;
+
+    margin: 15px 0 30px;
+
+    text-shadow:
+        0 3px 15px rgba(140, 66, 92, 0.15);
+}
+
+
+/* =========================================
+   VOTOS FINALES
+========================================= */
+
+.votos-finales {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.anillo-grande {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+    animation: pulso 3s ease-in-out infinite;
+}
+
+.votos-finales .etiqueta {
+    color: #a05070;
+
+    margin-bottom: 18px;
+}
+
+.votos-finales h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(52px, 8vw, 76px);
+
+    font-weight: 400;
+
+    color: #843d5a;
+
+    margin-bottom: 20px;
+}
+
+.linea-decorativa {
+    width: 80px;
+
+    height: 1px;
+
+    margin: 0 auto 35px;
+
+    background: #ad6782;
+}
+
+.votos-finales p {
+    color: #60414d;
+
+    font-size: 20px;
+
+    line-height: 1.85;
+
+    margin-bottom: 22px;
+}
+
+.votos-finales blockquote {
+    margin: 35px auto;
+
+    padding: 25px;
+
+    border-top: 1px solid rgba(140, 70, 95, 0.2);
+    border-bottom: 1px solid rgba(140, 70, 95, 0.2);
+
+    color: #773951;
+
+    font-size: 26px;
+
+    font-style: italic;
+}
+
+.frase-final {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px !important;
+
+    color: #984864 !important;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   FIRMA
+========================================= */
+
+.firma {
+    text-align: center;
+
+    max-width: 550px;
+
+    margin: 90px auto 20px;
+
+    padding-top: 55px;
+
+    border-top: 1px solid rgba(130, 70, 95, 0.18);
+}
+
+.firma > p:first-child {
+    font-size: 20px;
+
+    color: #75505e;
+
+    margin-bottom: 15px;
+}
+
+.respuesta {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 47px !important;
+
+    color: #914661 !important;
+
+    margin-bottom: 35px;
+}
+
+.firma-linea {
+    width: 100px;
+
+    height: 1px;
+
+    background: #a55b78;
+
+    margin: 0 auto 20px;
+}
+
+.con-amor {
+    font-size: 17px;
+
+    color: #85606c;
+}
+
+.nombre {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px;
+
+    color: #77364f;
+
+    margin: 5px 0;
+}
+
+.nombre span {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+}
+
+.esposo {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a66b80;
+}
+
+
+/* =========================================
+   CIERRE
+========================================= */
+
+.cierre {
+    text-align: center;
+
+    padding: 100px 20px 40px;
+
+    animation: aparecer 1.5s ease forwards;
+}
+
+.cierre-corazon {
+    color: #d48ba4;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+
+    animation: pulso 3s ease-in-out infinite;
+}
+
+.cierre > p:first-of-type {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #ba91a0;
+
+    margin-bottom: 20px;
+}
+
+.cierre h2 {
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(52px, 8vw, 75px);
+
+    font-weight: 400;
+
+    color: #fff0f5;
+
+    line-height: 1.1;
+}
+
+.cierre h2 span {
+    display: block;
+
+    color: #e6a5ba;
+}
+
+.pequeno-cierre {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: #c5aab5;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.continuar {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 25px;
+
+    border: 1px solid rgba(238, 180, 200, 0.35);
+
+    border-radius: 50px;
+
+    color: #f9dce7;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.continuar strong {
+    font-size: 20px;
+
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+}
+
+.continuar:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 190, 210, 0.1);
+
+    border-color: rgba(238, 180, 200, 0.65);
+}
+
+.continuar:hover strong {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   CORAZONES FINALES
+========================================= */
+
+.corazones-finales {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+.corazones-finales span {
+    position: absolute;
+
+    bottom: -30px;
+
+    color: rgba(240, 156, 180, 0.25);
+
+    font-size: 15px;
+
+    animation: subirCorazon 12s linear infinite;
+}
+
+.corazones-finales span:nth-child(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.corazones-finales span:nth-child(2) {
+    left: 30%;
+    animation-delay: 5s;
+}
+
+.corazones-finales span:nth-child(3) {
+    left: 55%;
+    animation-delay: 2s;
+}
+
+.corazones-finales span:nth-child(4) {
+    left: 75%;
+    animation-delay: 7s;
+}
+
+.corazones-finales span:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+
+}
+
+@keyframes pulso {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+}
+
+@keyframes subirCorazon {
+
+    0% {
+        transform: translateY(0) scale(0.7);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .votos-container {
+        padding: 55px 14px 40px;
+    }
+
+    .encabezado-votos {
+        margin-bottom: 35px;
+    }
+
+    .encabezado-votos h1 {
+        font-size: 58px;
+    }
+
+    .carta-votos {
+        padding: 55px 25px;
+
+        border-radius: 6px;
+    }
+
+    .carta-votos::before {
+        inset: 9px;
+    }
+
+    .introduccion p:not(.saludo) {
+        font-size: 18px;
+
+        line-height: 1.75;
+    }
+
+    .saludo {
+        font-size: 44px;
+    }
+
+    .voto {
+        padding-left: 23px;
+
+        margin-bottom: 60px;
+    }
+
+    .voto h2 {
+        font-size: 31px;
+    }
+
+    .voto p {
+        font-size: 18px;
+
+        line-height: 1.75;
+    }
+
+    .destacado,
+    .destacado-suave {
+        font-size: 19px !important;
+
+        padding: 18px;
+    }
+
+    .promesa-item p {
+        font-size: 16px;
+    }
+
+    .gran-promesa {
+        padding: 35px 18px;
+    }
+
+    .promesa-destacada {
+        font-size: 52px;
+    }
+
+    .votos-finales h2 {
+        font-size: 55px;
+    }
+
+    .votos-finales p {
+        font-size: 18px;
+    }
+
+    .votos-finales blockquote {
+        font-size: 22px;
+    }
+
+    .frase-final {
+        font-size: 40px !important;
+    }
+
+    .respuesta {
+        font-size: 39px !important;
+    }
+
+    .nombre {
+        font-size: 48px;
+    }
+
+    .cierre {
+        padding-top: 70px;
+    }
+
+    .cierre h2 {
+        font-size: 53px;
+    }
+
+    .pequeno-cierre {
+        font-size: 12px;
+    }
+
+    .continuar {
+        padding: 14px 20px;
+    }
+
+}
+
+
+/* =========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .encabezado-votos h1 {
+        font-size: 50px;
+    }
+
+    .carta-votos {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .voto {
+        padding-left: 19px;
+    }
+
+    .voto h2 {
+        font-size: 28px;
+    }
+
+    .promesa-destacada {
+        font-size: 45px;
+    }
+
+    .respuesta {
+        font-size: 34px !important;
+    }
+
+    .cierre h2 {
+        font-size: 46px;
+    }
+
+}

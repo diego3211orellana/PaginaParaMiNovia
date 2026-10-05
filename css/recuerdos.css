@@ -1,0 +1,1290 @@
+/* =========================================
+   RECUERDOS.CSS
+   ÁLBUM ROMÁNTICO
+========================================= */
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --fondo: #160b12;
+    --fondo-2: #1d0e16;
+    --fondo-3: #24121b;
+
+    --rosa: #cf6584;
+    --rosa-fuerte: #c7355b;
+    --rosa-suave: #d9a5b4;
+    --rosa-claro: #edcbd5;
+
+    --marfil: #f7edf0;
+
+    --texto: #d8c1c8;
+    --texto-suave: #aa8c96;
+
+    --borde: rgba(207, 101, 132, 0.18);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(167, 88, 113, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(207, 101, 132, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--fondo),
+            var(--fondo-2),
+            var(--fondo)
+        );
+
+    color: var(--texto);
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ÁLBUM PRINCIPAL
+========================================= */
+
+.album {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding:
+        80px
+        35px
+        100px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CORAZONES DECORATIVOS
+========================================= */
+
+.corazon {
+    position: absolute;
+
+    color: rgba(207, 101, 132, 0.12);
+
+    font-size: 22px;
+
+    pointer-events: none;
+
+    animation:
+        flotar 7s ease-in-out infinite;
+}
+
+.corazon-1 {
+    top: 8%;
+    left: 7%;
+
+    animation-delay: 0s;
+}
+
+.corazon-2 {
+    top: 18%;
+    right: 8%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+}
+
+.corazon-3 {
+    top: 42%;
+    left: 4%;
+
+    font-size: 15px;
+
+    animation-delay: 1s;
+}
+
+.corazon-4 {
+    top: 55%;
+    right: 5%;
+
+    font-size: 24px;
+
+    animation-delay: 3s;
+}
+
+.corazon-5 {
+    bottom: 15%;
+    left: 10%;
+
+    font-size: 18px;
+
+    animation-delay: 4s;
+}
+
+.corazon-6 {
+    right: 12%;
+    bottom: 8%;
+
+    font-size: 15px;
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0.5;
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(8deg);
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada-album {
+    position: relative;
+
+    max-width: 900px;
+
+    margin:
+        0 auto 70px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ETIQUETA
+========================================= */
+
+.etiqueta {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    padding:
+        8px 18px;
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 50px;
+
+    background:
+        rgba(207, 101, 132, 0.06);
+
+    color: var(--rosa);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   ORNAMENTO
+========================================= */
+
+.ornamento {
+    margin-bottom: 20px;
+
+    color:
+        rgba(207, 101, 132, 0.55);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.portada-album h1 {
+    margin-bottom: 22px;
+
+    color: var(--marfil);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            52px,
+            8vw,
+            90px
+        );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.portada-album h1 span {
+    display: block;
+
+    color: var(--rosa-claro);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 0.9em;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.introduccion {
+    max-width: 680px;
+
+    margin:
+        0 auto 30px;
+
+    color: var(--texto);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DISTANCIA
+========================================= */
+
+.distancia {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    color: var(--rosa-suave);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+}
+
+.distancia span {
+    color: var(--rosa);
+}
+
+.distancia .corazon-centro {
+    color: var(--rosa-fuerte);
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 30px;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.numero-contador {
+    color: var(--rosa-claro);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTÓN DESCUBRIR
+========================================= */
+
+.boton-descubrir {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    padding:
+        14px 25px;
+
+    border:
+        1px solid rgba(207, 101, 132, 0.3);
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 53, 91, 0.15),
+            rgba(207, 101, 132, 0.05)
+        );
+
+    color: var(--rosa-claro);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.boton-descubrir:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(199, 53, 91, 0.18);
+
+    border-color:
+        rgba(207, 101, 132, 0.45);
+}
+
+
+/* =========================================
+   MENSAJE INICIAL
+========================================= */
+
+.mensaje-inicial {
+    max-width: 850px;
+
+    margin:
+        0 auto 80px;
+
+    padding:
+        45px 50px;
+
+    border:
+        1px solid var(--borde);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(207, 101, 132, 0.035)
+        );
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.mensaje-inicial p {
+    color: var(--texto);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.flor {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--rosa);
+
+    font-size: 25px;
+}
+
+.firma-pequena {
+    display: block;
+
+    margin-top: 20px;
+
+    color: var(--rosa-claro);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   SECCIÓN GALERÍA
+========================================= */
+
+.seccion-galeria {
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TÍTULO DE SECCIÓN
+========================================= */
+
+.titulo-seccion {
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    margin-bottom: 15px;
+
+    color: var(--marfil);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            58px
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.titulo-seccion h2 span {
+    color: var(--rosa-claro);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-weight: 400;
+}
+
+.titulo-seccion > p:last-child {
+    max-width: 600px;
+
+    margin:
+        20px auto 0;
+
+    color: var(--texto-suave);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.galeria {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        45px 30px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.recuerdo {
+    position: relative;
+
+    padding:
+        10px 10px 20px;
+
+    border:
+        1px solid rgba(207, 101, 132, 0.13);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(207, 101, 132, 0.025)
+        );
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.3);
+
+    transform:
+        rotate(-1deg);
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.recuerdo:nth-child(even) {
+    transform:
+        rotate(1deg);
+}
+
+.recuerdo:nth-child(3n) {
+    transform:
+        rotate(-0.5deg);
+}
+
+.recuerdo:hover {
+    z-index: 5;
+
+    transform:
+        translateY(-8px)
+        rotate(0deg)
+        scale(1.015);
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.42);
+}
+
+
+/* =========================================
+   TARJETAS BAJADAS
+========================================= */
+
+.recuerdo-bajado {
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   MARCOS
+   TODAS LAS FOTOS GRANDES
+   Y DEL MISMO TAMAÑO
+========================================= */
+
+.marco {
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    background: #24121a;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================
+   ANULAR PROPORCIONES ANTERIORES
+========================================= */
+
+.foto-vertical,
+.foto-cuadrada,
+.foto-horizontal {
+    width: 100%;
+
+    height: 420px;
+
+    aspect-ratio: auto;
+}
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.marco img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.5s ease;
+}
+
+
+/* =========================================
+   EFECTO HOVER
+========================================= */
+
+.recuerdo:hover .marco img {
+    transform:
+        scale(1.045);
+
+    filter:
+        brightness(1.04)
+        saturate(1.04);
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.numero-foto {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 11, 18, 0.78);
+
+    border:
+        1px solid rgba(237, 203, 213, 0.2);
+
+    color: var(--rosa-claro);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    backdrop-filter: blur(5px);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   TEXTO DE CADA FOTO
+========================================= */
+
+.recuerdo figcaption {
+    padding:
+        18px 8px 5px;
+
+    text-align: center;
+}
+
+.recuerdo figcaption h3 {
+    margin-bottom: 8px;
+
+    color: var(--rosa-claro);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+
+    font-weight: 500;
+}
+
+.recuerdo figcaption p {
+    color: var(--texto);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   FOTO VACÍA
+========================================= */
+
+.foto-vacia {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #24121b,
+            #301521
+        );
+
+    color: var(--texto-suave);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.icono-foto {
+    color: var(--rosa);
+
+    font-size: 35px;
+}
+
+.texto-foto {
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   RECUERDO FINAL
+========================================= */
+
+.recuerdo-final {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(199, 53, 91, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+}
+
+
+/* =========================================
+   SECCIÓN FINAL
+========================================= */
+
+.final-album {
+    max-width: 850px;
+
+    margin:
+        100px auto 0;
+
+    padding:
+        70px 40px;
+
+    border-top:
+        1px solid var(--borde);
+
+    border-bottom:
+        1px solid var(--borde);
+
+    text-align: center;
+}
+
+.flor-final {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+}
+
+.final-album h2 {
+    margin-bottom: 25px;
+
+    color: var(--marfil);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            65px
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.final-album h2 span {
+    color: var(--rosa-claro);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-weight: 400;
+}
+
+.texto-final {
+    max-width: 650px;
+
+    margin:
+        0 auto 25px;
+
+    color: var(--texto);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+}
+
+.promesa-final {
+    max-width: 650px;
+
+    margin:
+        0 auto 25px;
+
+    color: var(--rosa-claro);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+}
+
+.corazon-final {
+    margin: 25px 0;
+
+    color: var(--rosa);
+
+    font-size: 35px;
+
+    animation:
+        latido 1.8s ease-in-out infinite;
+}
+
+.firma-final {
+    color: var(--rosa-suave);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 31px;
+
+    line-height: 1.5;
+}
+
+.firma-final strong {
+    color: var(--rosa-claro);
+
+    font-weight: 400;
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+
+.boton-volver {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+
+    padding:
+        14px 25px;
+
+    border:
+        1px solid rgba(207, 101, 132, 0.3);
+
+    border-radius: 50px;
+
+    background:
+        rgba(207, 101, 132, 0.06);
+
+    color: var(--rosa-claro);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.boton-volver:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(199, 53, 91, 0.15);
+
+    border-color:
+        rgba(207, 101, 132, 0.5);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .album {
+        padding:
+            70px 25px 80px;
+    }
+
+    .galeria {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            35px 25px;
+    }
+
+    .recuerdo-bajado {
+        margin-top: 20px;
+    }
+
+    .marco,
+    .foto-vertical,
+    .foto-cuadrada,
+    .foto-horizontal {
+        height: 390px;
+    }
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 650px) {
+
+    .album {
+        padding:
+            55px 15px 70px;
+    }
+
+
+    .portada-album {
+        margin-bottom: 50px;
+    }
+
+
+    .portada-album h1 {
+        font-size: 52px;
+    }
+
+
+    .introduccion {
+        font-size: 19px;
+    }
+
+
+    .distancia {
+        flex-direction: column;
+
+        gap: 5px;
+
+        font-size: 17px;
+    }
+
+
+    .mensaje-inicial {
+        margin-bottom: 55px;
+
+        padding:
+            35px 22px;
+    }
+
+
+    .mensaje-inicial p {
+        font-size: 20px;
+    }
+
+
+    .firma-pequena {
+        font-size: 30px;
+    }
+
+
+    .galeria {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .recuerdo,
+    .recuerdo:nth-child(even),
+    .recuerdo:nth-child(3n) {
+        transform: rotate(0deg);
+    }
+
+
+    .recuerdo:hover {
+        transform:
+            translateY(-5px)
+            scale(1.01);
+    }
+
+
+    .recuerdo-bajado {
+        margin-top: 0;
+    }
+
+
+    .marco,
+    .foto-vertical,
+    .foto-cuadrada,
+    .foto-horizontal {
+        height: 360px;
+    }
+
+
+    .recuerdo figcaption h3 {
+        font-size: 21px;
+    }
+
+
+    .recuerdo figcaption p {
+        font-size: 18px;
+    }
+
+
+    .final-album {
+        margin-top: 70px;
+
+        padding:
+            55px 20px;
+    }
+
+
+    .final-album h2 {
+        font-size: 45px;
+    }
+
+
+    .texto-final,
+    .promesa-final {
+        font-size: 19px;
+    }
+
+
+    .firma-final {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .album {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .portada-album h1 {
+        font-size: 45px;
+    }
+
+
+    .mensaje-inicial {
+        padding:
+            30px 18px;
+    }
+
+
+    .mensaje-inicial p {
+        font-size: 18px;
+    }
+
+
+    .titulo-seccion h2 {
+        font-size: 40px;
+    }
+
+
+    .recuerdo {
+        padding:
+            8px 8px 18px;
+    }
+
+
+    .marco,
+    .foto-vertical,
+    .foto-cuadrada,
+    .foto-horizontal {
+        height: 340px;
+    }
+
+
+    .final-album h2 {
+        font-size: 40px;
+    }
+}

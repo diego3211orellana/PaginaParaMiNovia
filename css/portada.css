@@ -1,0 +1,913 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(177, 83, 116, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(115, 53, 82, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #180b13,
+            #2a1320,
+            #12080e
+        );
+
+    color: #f9e9ef;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   FONDO
+========================================= */
+
+.fondo {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+
+/* Brillos */
+
+.brillo {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.12;
+
+}
+
+
+.brillo-1 {
+
+    top: -220px;
+
+    left: -180px;
+
+    background: #d8789b;
+
+}
+
+
+.brillo-2 {
+
+    right: -220px;
+
+    bottom: -230px;
+
+    background: #9d5274;
+
+}
+
+
+/* =========================================
+   CORAZONES
+========================================= */
+
+.corazones {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+
+.corazones span {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    color: rgba(237, 157, 182, 0.17);
+
+    font-size: 15px;
+
+    animation: subir 12s linear infinite;
+
+}
+
+
+.corazones span:nth-child(1) {
+
+    left: 8%;
+
+    animation-delay: 1s;
+
+}
+
+
+.corazones span:nth-child(2) {
+
+    left: 20%;
+
+    animation-delay: 6s;
+
+}
+
+
+.corazones span:nth-child(3) {
+
+    left: 35%;
+
+    animation-delay: 3s;
+
+}
+
+
+.corazones span:nth-child(4) {
+
+    left: 50%;
+
+    animation-delay: 8s;
+
+}
+
+
+.corazones span:nth-child(5) {
+
+    left: 65%;
+
+    animation-delay: 4s;
+
+}
+
+
+.corazones span:nth-child(6) {
+
+    left: 78%;
+
+    animation-delay: 9s;
+
+}
+
+
+.corazones span:nth-child(7) {
+
+    left: 90%;
+
+    animation-delay: 2s;
+
+}
+
+
+.corazones span:nth-child(8) {
+
+    left: 45%;
+
+    animation-delay: 11s;
+
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido-portada {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: center;
+
+    animation: aparecer 1.3s ease forwards;
+
+}
+
+
+/* =========================================
+   ETIQUETA
+========================================= */
+
+.etiqueta {
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 6px;
+
+    color: #d29aae;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(65px, 10vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: #fff0f5;
+
+    text-shadow:
+        0 5px 35px rgba(239, 157, 185, 0.17);
+
+}
+
+
+h1 span {
+
+    display: block;
+
+    color: #e2a2b8;
+
+}
+
+
+/* =========================================
+   ORNAMENTO
+========================================= */
+
+.ornamento {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 28px auto;
+
+}
+
+
+.ornamento span {
+
+    color: #c6819b;
+
+    font-size: 12px;
+
+}
+
+
+.ornamento div {
+
+    width: 90px;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ba6d8b,
+        transparent
+    );
+
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.subtitulo {
+
+    max-width: 480px;
+
+    margin: 0 auto 14px;
+
+    color: #e6ccd5;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+
+}
+
+
+.mensaje {
+
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    color: #bda2ae;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre {
+
+    position: relative;
+
+    width: 230px;
+
+    height: 150px;
+
+    margin: 45px auto 35px;
+
+}
+
+
+.sobre-sombra {
+
+    position: absolute;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: -12px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    filter: blur(12px);
+
+}
+
+
+/* Cuerpo */
+
+.sobre-cuerpo {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f5dfe5,
+            #eac8d3
+        );
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255,255,255,0.1);
+
+    overflow: hidden;
+
+}
+
+
+/* Parte interior */
+
+.sobre-cuerpo::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 115px solid transparent;
+
+    border-right: 115px solid transparent;
+
+    border-bottom: 78px solid rgba(184, 111, 136, 0.18);
+
+}
+
+
+/* Solapa */
+
+.sobre-solapa {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 115px solid transparent;
+
+    border-right: 115px solid transparent;
+
+    border-top: 82px solid #dfb8c5;
+
+    z-index: 2;
+
+}
+
+
+/* Sello */
+
+.sello {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 61px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #934766;
+
+    border: 3px solid #efd2dc;
+
+    box-shadow:
+        0 5px 15px rgba(80, 30, 50, 0.3);
+
+    animation: pulso 3s ease-in-out infinite;
+
+}
+
+
+.sello span {
+
+    color: #ffe8ef;
+
+    font-size: 15px;
+
+}
+
+
+/* Líneas del sobre */
+
+.lineas-sobre {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 25px;
+
+    right: 25px;
+
+    z-index: 3;
+
+    opacity: 0.35;
+
+}
+
+
+.lineas-sobre span {
+
+    display: block;
+
+    width: 75px;
+
+    height: 2px;
+
+    margin-bottom: 6px;
+
+    background: #9c5a72;
+
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton-carta {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 215px;
+
+    padding: 16px 22px;
+
+    border: 1px solid rgba(232, 177, 197, 0.35);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.045);
+
+    color: #f6dce6;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.boton-carta .icono {
+
+    font-size: 16px;
+
+}
+
+
+.boton-carta strong {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.boton-carta:hover {
+
+    transform: translateY(-5px);
+
+    background: rgba(234, 173, 194, 0.1);
+
+    border-color: rgba(234, 173, 194, 0.7);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
+
+}
+
+
+.boton-carta:hover strong {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   TEXTO INFERIOR
+========================================= */
+
+.pequeno {
+
+    margin-top: 25px;
+
+    color: #8f707d;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.pequeno span {
+
+    color: #c67894;
+
+    margin-left: 4px;
+
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes pulso {
+
+    0%,
+    100% {
+
+        transform: translateX(-50%) scale(1);
+
+    }
+
+    50% {
+
+        transform: translateX(-50%) scale(1.08);
+
+    }
+
+}
+
+
+@keyframes subir {
+
+    0% {
+
+        transform:
+            translateY(0)
+            scale(0.7);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    85% {
+
+        opacity: 0.7;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            scale(1.2);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .portada {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .etiqueta {
+
+        letter-spacing: 4px;
+
+    }
+
+
+    h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .subtitulo {
+
+        font-size: 18px;
+
+    }
+
+
+    .mensaje {
+
+        font-size: 10px;
+
+    }
+
+
+    .sobre {
+
+        width: 205px;
+
+        height: 135px;
+
+        margin-top: 35px;
+
+    }
+
+
+    .sobre-solapa {
+
+        border-left-width: 102.5px;
+
+        border-right-width: 102.5px;
+
+        border-top-width: 74px;
+
+    }
+
+
+    .sobre-cuerpo::before {
+
+        border-left-width: 102.5px;
+
+        border-right-width: 102.5px;
+
+        border-bottom-width: 70px;
+
+    }
+
+
+    .sello {
+
+        top: 53px;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    h1 {
+
+        font-size: 56px;
+
+    }
+
+
+    .subtitulo {
+
+        font-size: 17px;
+
+    }
+
+
+    .sobre {
+
+        width: 185px;
+
+        height: 122px;
+
+    }
+
+
+    .sobre-solapa {
+
+        border-left-width: 92.5px;
+
+        border-right-width: 92.5px;
+
+        border-top-width: 67px;
+
+    }
+
+
+    .sobre-cuerpo::before {
+
+        border-left-width: 92.5px;
+
+        border-right-width: 92.5px;
+
+        border-bottom-width: 63px;
+
+    }
+
+
+    .sello {
+
+        top: 48px;
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+}
